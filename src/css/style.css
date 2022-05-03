@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'My font';
+    src: url('../fonts/PlayfairDisplaySC-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -5,13 +12,19 @@ body {
 
 .content {
     color: #2f2d2c;
-    background: linear-gradient(to right, #eff1f3 70%, #37342c 30%);
 }
 
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 1px 1px 17px 2px #da9a4c;
+    color: white;
+    background: #141414d4;
+}
+
+.slogan {
+    font-family: 'My font';
 }
 
 .guides {
@@ -20,8 +33,28 @@ body {
     list-style-type: none;
 }
 
+.guides li a {
+    position: relative;
+}
+
+.guides li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 2%;
+    width: 0;
+    height: 0.2rem;
+    background: #bd1111;
+    transition: all 300ms ease-in-out;
+}
+
+.guides li a:hover::after {
+    width: 96%;
+}
+
 .btn-contact, .btn-order, .btn-pizza,
-.btn-pasta, .btn-salad, .btn-drinks {
+.btn-pasta, .btn-salad, .btn-drinks,
+.btn-order-online, .btn-menu {
     font-weight: 600;
     border: 2px solid #da9a4c;
     color: #fff;
@@ -36,10 +69,21 @@ body {
     cursor: pointer;
 }
 
-.btn-contact {
-    border: 2px solid white;
-    color: #37342c;
+.btn-contact, .btn-order-online, .btn-order {
+    border: 2px solid #bd1111;
+    color: white;
+    box-shadow: 0 0 40px 40px #bd1111 inset, 0 0 0 0 #bd1111;
+}
+
+.btn-order-online, .btn-menu {
+    width: 200px;
+    margin: 20px;
+}
+
+.btn-menu {
     box-shadow: 0 0 40px 40px white inset, 0 0 0 0 white;
+    color: #bd1111;
+    border: 2px solid #bd1111;
 }
 
 .btn-pasta, .btn-salad, .btn-drinks {
@@ -54,7 +98,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #2f2d2c;
+    color: white;
 }
 
 .home {
@@ -102,6 +146,7 @@ a {
     display: grid;
     gap: 40px;
     align-items: center;
+    border-bottom: dashed #9d0a0a;
 }
 
 .btns-menu {
@@ -179,4 +224,31 @@ li {
 
 .beer > li, .soft > li {
     margin-bottom: 15px;
+}
+
+h2 {
+    color: #9d0a0a;
+}
+
+.locations {
+    display: none;
+    padding: 50px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-hours {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hours-list {
+    padding: 0;
+}
+
+.row p {
+    margin-top: 0;
 }

@@ -42,22 +42,33 @@ export const header = () => {
         e.preventDefault(); 
         const home = document.querySelector ('.home');
         const menu = document.querySelector ('.menu');
-        const content = document.querySelector ('.content');
+        const locations = document.querySelector('.locations');
 
         home.style.cssText += 'display: none;';
         menu.style.cssText += 'display: block;';
-        content.style.cssText += 'background: #eff1f3';
+        locations.style.cssText += 'display: none;';
     });
 
     a1.addEventListener('click', e => {
         e.preventDefault(); 
         const home = document.querySelector ('.home');
         const menu = document.querySelector ('.menu');
-        const content = document.querySelector ('.content');
-                  
+        const locations = document.querySelector('.locations');
+         
         home.style.cssText += 'display: grid;';
         menu.style.cssText += 'display: none;';
-        content.style.cssText += 'background: linear-gradient(to right, #eff1f3 70%, #37342c 30%);';
+        locations.style.cssText += 'display: none;';
+    });
+
+    a2.addEventListener('click', e => {
+        e.preventDefault(); 
+        const home = document.querySelector ('.home');
+        const menu = document.querySelector ('.menu');
+        const locations = document.querySelector('.locations');
+                  
+        home.style.cssText += 'display: none;';
+        menu.style.cssText += 'display: none;';
+        locations.style.cssText += 'display: block;';
     });
 
     return div;
