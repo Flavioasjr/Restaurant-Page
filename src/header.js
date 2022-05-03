@@ -36,7 +36,29 @@ export const header = () => {
 
     div.appendChild(h3);
     div.appendChild(ul);
-    div.appendChild(button);
+    div.appendChild(button);    
+
+    a3.addEventListener('click', e => {
+        e.preventDefault(); 
+        const home = document.querySelector ('.home');
+        const menu = document.querySelector ('.menu');
+        const content = document.querySelector ('.content');
+
+        home.style.cssText += 'display: none;';
+        menu.style.cssText += 'display: block;';
+        content.style.cssText += 'background: #eff1f3';
+    });
+
+    a1.addEventListener('click', e => {
+        e.preventDefault(); 
+        const home = document.querySelector ('.home');
+        const menu = document.querySelector ('.menu');
+        const content = document.querySelector ('.content');
+                  
+        home.style.cssText += 'display: grid;';
+        menu.style.cssText += 'display: none;';
+        content.style.cssText += 'background: linear-gradient(to right, #eff1f3 70%, #37342c 30%);';
+    });
 
     return div;
 }

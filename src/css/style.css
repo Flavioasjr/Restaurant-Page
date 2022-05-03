@@ -1,31 +1,31 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 .content {
     color: #2f2d2c;
-    background: linear-gradient(192deg, #fddce2b0, white, #dbdbdb52 );
+    background: linear-gradient(to right, #eff1f3 70%, #37342c 30%);
 }
 
 .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px 1px 0px 1px whitesmoke;
-    background: linear-gradient(359deg, white, #fff3f580, #dbdbdb52);
 }
 
 .guides {
-    gap: 10px;
+    gap: 60px;
     display: flex;
     list-style-type: none;
 }
 
-.btn-contact, .btn-order {
+.btn-contact, .btn-order, .btn-pizza,
+.btn-pasta, .btn-salad, .btn-drinks {
     font-weight: 600;
-    border: 2px solid #f37118;
+    border: 2px solid #da9a4c;
     color: #fff;
-    box-shadow: 0 0 40px 40px #f37118 inset, 0 0 0 0 #f37118;
+    box-shadow: 0 0 40px 40px #da9a4c inset, 0 0 0 0 #da9a4c;
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
     padding-left: 30px;
@@ -36,21 +36,147 @@ body {
     cursor: pointer;
 }
 
+.btn-contact {
+    border: 2px solid white;
+    color: #37342c;
+    box-shadow: 0 0 40px 40px white inset, 0 0 0 0 white;
+}
+
+.btn-pasta, .btn-salad, .btn-drinks {
+    width: 120px;
+    box-shadow: 0 0 40px 40px white inset, 0 0 0 0 white;
+    color: #da9a4c;
+} 
+
+.btn-pizza {
+    width: 120px;
+}
+
 a {
     text-decoration: none;
     color: #2f2d2c;
 }
 
 .home {
-    display: flex;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    align-items: center;
     gap: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 70px;
+    height: 90vh;
 }
 
 .img-home {
     height: 350px;
     width: 350px;
     border-radius: 400px;
+}
+
+.sub-img-home {
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    position: absolute;
+    right: 10px;
+    top: 450px;
+}
+
+.salad-img-home {
+    height: 100px;
+    width: 100px;
+    border-radius: 150px;
+    position: absolute;
+    right: 450px;
+    top: 350px;
+}
+
+.menu {
+    display: none;
+    min-height: 90vh;
+    padding: 0 50px 0 50px;
+}
+
+.header-menu {
+    grid-template-columns: 1fr 3fr;
+    display: grid;
+    gap: 40px;
+    align-items: center;
+}
+
+.btns-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-pizza {
+    text-align: center;
+}
+
+.pizzas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flavors {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.prices {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-pasta, .menu-salad {
+    display: none;
+}
+
+.menu-pasta > h2, .menu-salad > h2 {
+    text-align: center;
+}
+
+.pastas-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.flavors > li > p {
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+
+.prices-pastas {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-drinks {
+    display: none;
+    text-align: center;
+}
+
+.drinks-list {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    justify-content: center;
+}
+
+.beer > li, .soft > li {
+    margin-bottom: 15px;
 }
