@@ -153,8 +153,6 @@ function menuPizza() {
     const pMenuPizza2 = document.createElement('p');
     const pMenuPizza3 = document.createElement('p');
     const h2MenuPizza = document.createElement('h2');
-    const ul = document.createElement('ul');
-    const ulPrice = document.createElement('ul');
     const li1 = document.createElement('li');
     const li2 = document.createElement('li');
     const li3 = document.createElement('li');
@@ -170,8 +168,6 @@ function menuPizza() {
 
     divPizza.classList.add('menu-pizza');
     childDivPizza.classList.add('pizzas-list');
-    ul.classList.add('flavors');
-    ulPrice.classList.add('prices');
     
 
     h2MenuPizza.textContent = 'CLASSIC PIZZA';
@@ -186,12 +182,6 @@ function menuPizza() {
     li5.textContent = 'Philly Steak';
     li6.textContent = 'Hawaiian';
 
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
-    ul.appendChild(li5);
-    ul.appendChild(li6);
 
     li7.textContent = '$ 14.50 / 20.95';
     li8.textContent = '$ 14.50 / 20.95';
@@ -200,15 +190,18 @@ function menuPizza() {
     li11.textContent = '$ 15.95 / 23.50';
     li12.textContent = '$ 11.75 / 16.40';
 
-    ulPrice.appendChild(li7);
-    ulPrice.appendChild(li8);
-    ulPrice.appendChild(li9);
-    ulPrice.appendChild(li10);
-    ulPrice.appendChild(li11);
-    ulPrice.appendChild(li12);
-
-    childDivPizza.appendChild(ul);
-    childDivPizza.appendChild(ulPrice);
+    childDivPizza.appendChild(li1);
+    childDivPizza.appendChild(li7);
+    childDivPizza.appendChild(li2);
+    childDivPizza.appendChild(li8);
+    childDivPizza.appendChild(li3);
+    childDivPizza.appendChild(li9);
+    childDivPizza.appendChild(li4);
+    childDivPizza.appendChild(li10);
+    childDivPizza.appendChild(li5);
+    childDivPizza.appendChild(li11);
+    childDivPizza.appendChild(li6);
+    childDivPizza.appendChild(li12);
 
     divPizza.appendChild(h2MenuPizza);
     divPizza.appendChild(pMenuPizza);
@@ -223,8 +216,6 @@ function menuPasta() {
     const div = document.createElement('div');
     const h2 = document.createElement('h2');
     const childDiv = document.createElement('div');
-    const ul = document.createElement('ul');
-    const ulPrice = document.createElement('ul');
     const p1 = document.createElement('p');
     const p2 = document.createElement('p');
     const p3 = document.createElement('p');
@@ -246,8 +237,6 @@ function menuPasta() {
 
     div.classList.add('menu-pasta');
     childDiv.classList.add('pastas-list');
-    ul.classList.add('flavors');
-    ulPrice.classList.add('prices-pastas');
 
     h2.textContent = 'PASTAS';
 
@@ -271,13 +260,6 @@ function menuPasta() {
     li5.appendChild(p5);
     li6.appendChild(p6);
 
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
-    ul.appendChild(li5);
-    ul.appendChild(li6);
-
     li7.textContent = '$ 14.50 / 20.95';
     li8.textContent = '$ 14.50 / 20.95';
     li9.textContent = '$ 14.50 / 20.95';
@@ -285,15 +267,18 @@ function menuPasta() {
     li11.textContent = '$ 15.95 / 23.50';
     li12.textContent = '$ 11.75 / 16.40';
 
-    ulPrice.appendChild(li7);
-    ulPrice.appendChild(li8);
-    ulPrice.appendChild(li9);
-    ulPrice.appendChild(li10);
-    ulPrice.appendChild(li11);
-    ulPrice.appendChild(li12);
-
-    childDiv.appendChild(ul);
-    childDiv.appendChild(ulPrice);
+    childDiv.appendChild(li1);
+    childDiv.appendChild(li7);
+    childDiv.appendChild(li2);
+    childDiv.appendChild(li8);
+    childDiv.appendChild(li3);
+    childDiv.appendChild(li9);
+    childDiv.appendChild(li4);
+    childDiv.appendChild(li10);
+    childDiv.appendChild(li5);
+    childDiv.appendChild(li11);
+    childDiv.appendChild(li6);
+    childDiv.appendChild(li12);
 
     div.appendChild(h2);
     div.appendChild(childDiv);
@@ -341,24 +326,21 @@ function menuSalad() {
     li3.appendChild(p3);
     li4.appendChild(p4);
 
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
-    ul.appendChild(li4);
 
     li7.textContent = '$ 29.95';
     li8.textContent = '$ 29.95';
     li9.textContent = '$ 33.95';
     li10.textContent = '$ 33.95';
 
-    ulPrice.appendChild(li7);
-    ulPrice.appendChild(li8);
-    ulPrice.appendChild(li9);
-    ulPrice.appendChild(li10);
-
-    childDiv.appendChild(ul);
-    childDiv.appendChild(ulPrice);
-
+    childDiv.appendChild(li1);
+    childDiv.appendChild(li7);
+    childDiv.appendChild(li2);
+    childDiv.appendChild(li8);
+    childDiv.appendChild(li3);
+    childDiv.appendChild(li9);
+    childDiv.appendChild(li4);
+    childDiv.appendChild(li10);
+    
     div.appendChild(h2);
     div.appendChild(childDiv);
 

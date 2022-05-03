@@ -10,6 +10,10 @@ body {
     font-family: sans-serif;
 }
 
+ul {
+    padding: 0;
+}
+
 .content {
     color: #2f2d2c;
 }
@@ -162,7 +166,13 @@ a {
 .pizzas-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
+
+.pizzas-list li:nth-child(odd) {
+    font-weight: 900;
+}
+
 
 li {
     list-style-type: none;
@@ -194,9 +204,15 @@ li {
 .pastas-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
 }
 
-.flavors > li > p {
+.pastas-list li:nth-child(odd) {
+    font-weight: 900;
+}
+
+.pastas-list > li > p {
     font-weight: 100;
     font-size: 0.8rem;
 }
@@ -251,4 +267,40 @@ h2 {
 
 .row p {
     margin-top: 0;
+}
+
+@media screen and (max-width: 425px) {
+    .guides {
+        gap: 10px;
+        padding: 0;
+    }
+
+    .btn-contact {
+        display: none;
+    }
+
+    .home {
+        display: block;
+        padding-top: 50px;
+    }
+
+    .img-home {
+        display: none;
+    }
+
+    .menu {
+        padding: 0 10px 0 10px; 
+    }
+
+    .btns-menu {
+        flex-wrap: wrap;
+    }
+
+    .beer {
+        padding: 0;
+    }
+    
+    .locations {
+        padding: 10px;
+    }
 }
